@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/X11R6/share/openbox/menu.xsd">
+	<menu id="root-menu" label="openbox3">
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>
+					urxvtcd.sh
+				</execute>
+			</action>
+		</item>
+		<item label="Firefox">
+			<action name="Execute">
+				<execute>
+					firefox
+				</execute>
+			</action>
+		</item>
+		<item label="Chromium-browser">
+			<action name="Execute">
+				<execute>
+					chromium-browser
+				</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>
+					thunar
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="net" label="Network">
+			<item label="Thunerbird">
+				<action name="Execute">
+					<execute>
+						thunderbird
+					</execute>
+				</action>
+			</item>
+			<item label="Iceweasel">
+				<action name="Execute">
+					<execute>
+						iceweasel
+					</execute>
+				</action>
+			</item>
+			<item label="Transmission">
+				<action name="Execute">
+					<execute>
+						transmission
+					</execute>
+				</action>
+			</item>
+			<item label="Wireshark">
+				<action name="Execute">
+					<execute>
+						gksudo wireshark
+					</execute>
+				</action>
+			</item>
+			<item label="aMule">
+				<action name="Execute">
+					<execute>
+						amule
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="development" label="Development">
+			<item label="Matlab">
+				<action name="Execute">
+					<execute>
+						xterm -e matlab -display :0
+					</execute>
+				</action>
+			</item>
+			<item label="Qt Creator">
+				<action name="Execute">
+					<execute>
+						qtcreator
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="gr" label="Graphics">
+			<item label="Dia Diagram Editor">
+				<action name="Execute">
+					<execute>
+						dia
+					</execute>
+				</action>
+			</item>
+			<item label="GNU Image Manipulation Program">
+				<action name="Execute">
+					<execute>
+						gimp-2.6
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="office" label="Office">
+			<item label="JabRef">
+				<action name="Execute">
+					<execute>
+						jabref
+					</execute>
+				</action>
+			</item>
+			<item label="XMind">
+				<action name="Execute">
+					<execute>
+						xmind
+					</execute>
+				</action>
+			</item>
+			<item label="Libreoffice">
+				<action name="Execute">
+					<execute>
+						libreoffice
+					</execute>
+				</action>
+			</item>
+			<item label="LYX">
+				<action name="Execute">
+					<execute>
+						lyx
+					</execute>
+				</action>
+			</item>
+			<item label="Texworks">
+				<action name="Execute">
+					<execute>
+						texworks
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="system" label="System Tools">
+			<item label="Gcalctool">
+				<action name="Execute">
+					<execute>
+						gcalctool
+					</execute>
+				</action>
+			</item>
+			<item label="BleachBit (as root)">
+				<action name="Execute">
+					<execute>
+						su-to-root -X -c bleachbit
+					</execute>
+				</action>
+			</item>
+			<item label="Gtk-ChTheme">
+				<action name="Execute">
+					<execute>
+						/usr/bin/gtk-chtheme
+					</execute>
+				</action>
+			</item>
+			<item label="VirtualBox">
+				<action name="Execute">
+					<execute>
+						VirtualBox
+					</execute>
+				</action>
+			</item>
+			<item label="Synaptic Package Manager">
+				<action name="Execute">
+					<execute>
+						su-to-root -X -c /usr/sbin/synaptic
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="games" label="Games">
+			<item label="Chromium-bsu">
+				<action name="Execute">
+					<execute>
+						chromium-bsu
+					</execute>
+				</action>
+			</item>
+			<item label="WesNoth">
+				<action name="Execute">
+					<execute>
+						wesnoth
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="Debian"/>
+		<separator/>
+		<file>
+			debian-menu.xml
+		</file>
+		<menu id="Openbox Settings" label="Openbox Settings">
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<item label="Openbox Configuration Manager">
+				<action name="Execute">
+					<execute>
+						obconf
+					</execute>
+				</action>
+			</item>
+			<item label="Autostarted Applications">
+				<action name="Execute">
+					<execute>
+						gvim /home/stesen/.config/openbox/autostart.sh
+					</execute>
+				</action>
+			</item>
+			<item label="Edit rc.xml">
+				<action name="Execute">
+					<execute>
+						gvim /home/stesen/.config/openbox/rc.xml
+					</execute>
+				</action>
+			</item>
+			<item label="Edit themes">
+				<action name="Execute">
+					<execute>
+						obtheme
+					</execute>
+				</action>
+			</item>
+			<item label="Edit menu.xml">
+				<action name="Execute">
+					<execute>
+						obmenu
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>
+                    oboff
+				</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

@@ -1,0 +1,116 @@
+XTerm*locale: true
+
+!XTerm*fontMenu*fontdefault*Label: Default
+!XTerm*font:xtf:WenQuanYi Micro Hei Mono:size=9
+!XTerm*widefont:xtf:WenQuanYi Micro Hei Mono:size=9
+!XTerm*faceName: WenQuanYi Micro Hei Mono:size=9
+!XTerm*faceNameDoublesize: WenQuanYi Micro Hei Mono:size=9
+XTerm*font:xtf:           WenQuanYi Micro Hei Mono:size=8
+XTerm*widefont:xtf:       WenQuanYi Micro Hei Mono:size=8
+XTerm*faceName:           WenQuanYi Micro Hei Mono:size=8
+XTerm*faceNameDoublesize: WenQuanYi Micro Hei Mono:size=8
+
+! black
+XTerm*color0  : #2E2E34343636
+XTerm*color8  : #555557575353
+! red
+XTerm*color1  : #CCCC00000000
+XTerm*color9  : #EFEF29292929
+! green
+XTerm*color2  : #4E4E9A9A0606
+XTerm*color10 : #8A8AE2E23434
+! yellow
+XTerm*color3  : #C4C4A0A00000
+XTerm*color11 : #FCFCE9E94F4F
+! blue
+XTerm*color4  : #34346565A4A4
+XTerm*color12 : #72729F9FCFCF
+! magenta
+XTerm*color5  : #757550507B7B
+XTerm*color13 : #ADAD7F7FA8A8
+! cyan
+XTerm*color6  : #060698209A9A
+XTerm*color14 : #3434E2E2E2E2
+! white
+XTerm*color7  : #D3D3D7D7CFCF
+XTerm*color15 : #EEEEEEEEECEC
+
+XTerm*background:	grey5
+XTerm*foreground:	grey
+
+!fix alt key input
+XTerm*eightBitInput: false
+XTerm*altSendsEscape: true
+
+!look and feel
+XTerm.termName: XTerm-256color
+XTerm*geometry: 80x30
+XTerm*scrollBar: false
+XTerm*rightScrollBar: true
+XTerm*loginshell: false
+XTerm*cursorBlink: true
+XTerm.borderLess: true
+XTerm*alwaysBoldMode: true
+XTerm*cjkWidth:false
+
+
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+Xft.dpi:   107
+
+xpdf*enableFreetype:    yes
+xpdf*antialias:         yes
+xpdf*foreground:        black
+xpdf*background:        white
+xpdf*urlCommand:        /usr/bin/firefox %s
+
+!xcalc-----------------------------------------------------------------------
+
+xcalc*geometry:                        200x275
+xcalc.ti.bevel.background:             #111111
+xcalc.ti.bevel.screen.background:      #000000
+xcalc.ti.bevel.screen.DEG.background:  #000000
+xcalc.ti.bevel.screen.DEG.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.GRAD.background: #000000
+xcalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.RAD.background:  #000000
+xcalc.ti.bevel.screen.RAD.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.INV.background:  #000000
+xcalc.ti.bevel.screen.INV.foreground:  Red
+xcalc.ti.bevel.screen.LCD.background:  #000000
+xcalc.ti.bevel.screen.LCD.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.LCD.shadowWidth: 0
+xcalc.ti.bevel.screen.M.background:    #000000
+xcalc.ti.bevel.screen.M.foreground:    LightSeaGreen
+xcalc.ti.bevel.screen.P.background:    #000000
+xcalc.ti.bevel.screen.P.foreground:    Yellow
+xcalc.ti.Command.foreground:  White
+xcalc.ti.Command.background:  #777777
+xcalc.ti.button5.background:  Orange3
+xcalc.ti.button19.background: #611161
+xcalc.ti.button18.background: #611161
+xcalc.ti.button20.background: #611111
+!uncomment to change label on division button
+!xcalc.ti.button20.label:      /
+xcalc.ti.button25.background: #722222
+xcalc.ti.button30.background: #833333
+xcalc.ti.button35.background: #944444
+xcalc.ti.button40.background: #a55555
+xcalc.ti.button22.background: #222262
+xcalc.ti.button23.background: #222262
+xcalc.ti.button24.background: #222272
+xcalc.ti.button27.background: #333373
+xcalc.ti.button28.background: #333373
+xcalc.ti.button29.background: #333373
+xcalc.ti.button32.background: #444484
+xcalc.ti.button33.background: #444484
+xcalc.ti.button34.background: #444484
+xcalc.ti.button37.background: #555595
+xcalc.ti.button38.background: #555595
+xcalc.ti.button39.background: #555595
+XCalc*Cursor:                 hand2
+XCalc*ShapeStyle:             rectangle
+

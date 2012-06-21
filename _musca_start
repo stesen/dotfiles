@@ -1,0 +1,88 @@
+manage off trayer
+manage off bmpanel2
+manage off xfce4-panel
+manage off tint2
+manage off conky
+manage off zenity
+manage off stp
+
+exec xrdb ~/.Xresources
+exec tint2 -c ~/.config/tint2/text_only_1.tint2rc
+exec dzen2_info.sh
+exec (sleep 3 && netwmpager)
+exec xbindkeys
+exec automount.sh
+#exec ibus-daemon --xim > /dev/null 2>&1
+exec fcitx -d > /dev/null 2>&1
+exec volumeicon
+#exec nm-applet
+#exec /home/stesen/.config/background.sh
+
+set frame_resize 30
+set window_open_frame empty
+set focus_follow_mouse 1
+set dmenu dmenu_run -b -hist /home/stesen/.dmenu_hist -fn "WenQuanYi Micro Hei-9" -nb "#2e3436" -nf "#f0f0f0" -sb "#2e3436" -sf "#729fcf" -p exec
+set dmenu /usr/bin/dmenu_run -i
+set border_focus #888888
+border off
+
+bind off Mod4+w
+bind off Mod4+m
+bind off Mod4+g
+
+bind off Mod4+t
+bind on Mod4+t exec xterm
+bind on Mod4+q exec musca-off
+
+bind on Mod1+Left slide left
+bind on Mod1+Right slide right
+bind on Mod1+Up slide up
+bind on Mod1+Down slide down
+
+bind on Mod1+Right use (next)
+bind on Mod1+Left use (prev)
+bind on Mod1+Tab use (other)
+
+bind on Mod1+F4 kill
+bind on Mod4+Tab cycle
+
+bind on Mod4+1 use 0
+bind on Mod4+2 use 1
+bind on Mod4+3 use 2
+bind on Mod4+4 use 3
+bind on Mod4+5 use 4
+bind on Mod4+6 use 5
+bind on Mod4+7 use 6
+bind on Mod4+8 use 7
+#bind on Mod4+9 use 8
+
+bind on Mod4+Shift+1 move 0
+bind on Mod4+Shift+2 move 1
+bind on Mod4+Shift+3 move 2
+bind on Mod4+Shift+4 move 3
+bind on Mod4+Shift+5 move 4
+bind on Mod4+Shift+6 move 5
+bind on Mod4+Shift+7 move 6
+bind on Mod4+Shift+8 move 7
+#bind on Mod4+Shift+9 move 8
+
+bind on Mod4+Shift+h swap left
+bind on Mod4+Shift+l swap right
+bind on Mod4+Shift+k swap up
+bind on Mod4+Shift+j swap down
+
+bind on XF86AudioRaiseVolume exec amixer sset Master,0 5%+
+bind on XF86AudioLowerVolume exec amixer sset Master,0 5%-
+
+pad 0 0 15 0
+hook on ^add pad 0 0 15 0
+
+add 坤
+add 震
+add 巽
+add 艮
+add 兑
+add 坎
+add 离
+use 0
+name 乾

@@ -1,0 +1,6 @@
+/opt/m00194513/ti/mydroid/kernel/rtc_suspend_clear_reg.patch
+/opt/m00194513/ti/mydroid/kernel/#rtc_suspend_clear_reg.patch#
+/opt/m00194513/ti/mydroid/kernel/drivers/rtc/rtc-twl.c
+/opt/m00194513/ti/mydroid/kernel/drivers/rtc/#rtc-twl.c#
+/opt/m00194513/ti/mydroid/kernel/drivers/mfd/twl-core.c
+/opt/m00194513/ti/mydroid/kernel/drivers/mfd/#twl-core.c#

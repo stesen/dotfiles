@@ -1,0 +1,4 @@
+(define-abbrev-table 'c-mode-abbrev-table '(
+    ("icld" "#include <" "C-b")
+    ("def" "#define " nil 1)
+)) 

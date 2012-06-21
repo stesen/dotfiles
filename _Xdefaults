@@ -1,0 +1,112 @@
+URxvt*font:xft:WenQuanYi Micro Hei Mono:size=8:antialias=true
+!URxvt*font:xft:Droid Sans Mono Dotted:size=8:antialias=true
+
+!URxvt.font:xft:DejaVu Sans YuanTi Mono:size=8:antialias=true
+!URxvt.boldFont:xft:DejaVu Sans YuanTi Mono:Bold:size=8:antialias=true
+!URxvt.italicFont:xft:DejaVu Sans YuanTi Mono:Italic:size=8:antialias=true
+!URxvt.bolditalicFont:xft:DejaVu Sans YuanTi Mono:Bold Italic:size=8:antialias=true
+
+! transparency
+!--------------------------------------------------
+! URxvt.inheritPixmap:        True
+! URxvt.tintColor:            grey
+! URxvt.shading:              10
+! URxvt.depth: 32
+!-------------------------------------------------- 
+
+URxvt.visualBell: False
+URxvt.background:[80]#101010
+URxvt.foreground:grey
+URxvt*scrollBar: False
+URxvt*scrollTtyOutput: False
+URxvt*scrollTtyKeypress: True
+URxvt*secondaryScroll: True
+URxvt*saveLines: 2048
+URxvt.borderless: 0
+URxvt.cursorBlink: True
+URxvt.cursorUnderline: True
+URxvt.geometry: 85x28
+!URxvt.transparent:True
+URxvt.transparency:50
+URxvt.termName: rxvt
+URxvt.title: urxvt
+Urxvt.inputMethod:fcitx
+URxvt*urlLauncher:chromium-browser
+URxvt.perl-ext-common: default,tabbed,matcher,selection-pastebin,-selection-popup,-option-popup
+URxvt.matcher.button:  1
+!URxvt.keysym.C-Delete: perl:matcher
+!URxvt.keysym.C-M-p: perl:selection-pastebin:remote-pastebin
+
+URxvt.tabbed.tabbar-fg: 15
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    16
+URxvt.tabbed.tab-bg:    12
+URxvt*iconFile: /home/stesen/.config/terminal.png
+
+!URxvt.color0  : #2E2E34343636
+!URxvt.color8  : #555557575353
+!! red
+!URxvt.color1  : #CCCC00000000
+!URxvt.color9  : #EFEF29292929
+!! green
+!URxvt.color2  : #4E4E9A9A0606
+!URxvt.color10 : #8A8AE2E23434
+!! yellow
+!URxvt.color3  : #C4C4A0A00000
+!URxvt.color11 : #FCFCE9E94F4F
+!! blue
+!URxvt.color4  : #34346565A4A4
+!URxvt.color12 : #72729F9FCFCF
+!URxvt.color4  : #414141417171
+!URxvt.color12 : #41418686bebe
+!! magenta
+!URxvt.color5  : #757550507B7B
+!URxvt.color13 : #ADAD7F7FA8A8
+!! cyan
+!URxvt.color6  : #060698209A9A
+!URxvt.color14 : #3434E2E2E2E2
+!! white
+!URxvt.color7  : #D3D3D7D7CFCF
+!URxvt.color15 : #EEEEEEEEECEC
+
+URxvt.color0  : #000000
+URxvt.color1  : #CC0000
+URxvt.color2  : #4E9A06
+URxvt.color3  : #C4A000
+URxvt.color4  : #3465A4
+URxvt.color5  : #75507B
+URxvt.color6  : #06989A
+URxvt.color7  : #D3D7CF
+URxvt.color8  : #555753
+URxvt.color9  : #EF2929
+URxvt.color10  : #8AE234
+URxvt.color11  : #FCE94F
+URxvt.color12  : #729FCF
+URxvt.color13  : #AD7FA8
+URxvt.color14  : #34E2E2
+URxvt.color15  : #EEEEEC
+
+!! black
+!URxvt.color0  : #000000000000
+!URxvt.color8  : #666666666666
+!! red
+!URxvt.color1  : #9e9e18182828
+!URxvt.color9  : #cfcf61617171
+!! green
+!URxvt.color2  : #4e4e9a9a0606
+!URxvt.color10 : #8a82c2e23434
+!! yellow
+!URxvt.color3  : #96968a8a3838
+!URxvt.color11 : #fffff7f79696
+!! blue
+!URxvt.color4  : #414141417171
+!URxvt.color12 : #41418686bebe
+!! magenta
+!URxvt.color5  : #96963c3c5959
+!URxvt.color13 : #cfcf9e9ebebe
+!! cyan
+!URxvt.color6  : #414181817979
+!URxvt.color14 : #7171bebebebe
+!! white
+!URxvt.color7  : #bebebebebebe
+!URxvt.color15 : #ffffffffffff

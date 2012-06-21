@@ -1,0 +1,52 @@
+;;; Automatically generated on Sat Jun  9 19:50:53 2012
+;;; Invoked by stesen@stesen-laptop using 23.4.1
+(setq-default kill-ring '(#("   read(INF, $buf, UNSIGNED_SIZE * 2);
+    my ($r_size, $r_addr) = unpack(\"VV\", $buf);
+
+    # Read second size and address (assume little-endian)
+    read(INF, $buf, UNSIGNED_SIZE * 2);
+    my ($s_size, $s_addr) = unpack(\"VV\", $buf);
+
+    # Ignore tags_addr
+    read(INF, $buf, UNSIGNED_SIZE);
+
+    # get the page size (assume little-endian)
+    read(INF, $buf, UNSIGNED_SIZE);
+    my ($p_size) = unpack(\"V\", $buf);
+" 0 14 (fontified t) 14 17 (fontified t face font-lock-variable-name-face) 17 43 (fontified t) 43 45 (fontified t face font-lock-type-face) 45 48 (fontified t) 48 54 (fontified t face ...) 54 57 (fontified t) 57 63 (fontified t face font-lock-variable-name-face) 63 74 (fontified t) 74 78 (fontified t face font-lock-string-face) 78 81 (fontified t) 81 84 (fontified t face font-lock-variable-name-face) 84 92 (fontified t) 92 146 (fontified t face font-lock-comment-face) 146 161 (fontified t) 161 164 (fontified t face font-lock-variable-name-face) 164 190 (fontified t) 190 192 (fontified t face font-lock-type-face) 192 195 (fontified t) 195 201 (fontified t face ...) 201 204 (fontified t) 204 210 (fontified t face font-lock-variable-name-face) 210 221 (fontified t) 221 225 (fontified t face font-lock-string-face) 225 228 (fontified t) 228 231 (fontified t face font-lock-variable-name-face) 231 234 (fontified t) 234 239 (fontified t) 239 258 (fontified t face font-lock-comment-face) 258 273 (fontified t) 273 276 (fontified t face font-lock-variable-name-face) 276 294 (fontified t) 294 299 (fontified t) 299 342 (fontified t face font-lock-comment-face) 342 357 (fontified t) 357 360 (fontified t face font-lock-variable-name-face) 360 382 (fontified t) 382 384 (fontified t face font-lock-type-face) 384 387 (fontified t) 387 393 (fontified t face ...) 393 404 (fontified t) 404 407 (fontified t face font-lock-string-face) 407 410 (fontified t) 410 413 (fontified t face font-lock-variable-name-face) 413 416 (fontified t)) #("\"ifstat -i wlan0 -q 1 1 | grep -v \\\"in.*out\\\" | sed -e ':a;N;s/\\s\\+\\n/:/g' -e 's/\\s\\+/ /g' -e 's/^\\s\\+//' -e 's/\\.\\w\\+//g'\"" 0 1 (fontified t face font-lock-string-face) 1 36 (fontified t face font-lock-string-face) 36 44 (fontified t face font-lock-string-face) 44 45 (fontified t face font-lock-string-face) 45 56 (fontified t face font-lock-string-face) 56 58 (fontified t face font-lock-string-face) 58 59 (fontified t face font-lock-string-face) 59 122 (fontified t face font-lock-string-face) 122 123 (fontified t face font-lock-string-face)) "ifstat -i wlan0 -q 1 1 | grep -v \"in.*out\" | sed -e \":a;N;s/\\s\\+\\n/:/g\" -e \"s/\\s\\+/ /g\" -e \"s/^\\s\\+//\" -e \"s/\\.\\w\\+//g\"" "s/\\(.*\\)\\n\\(.*\\)/\\2: \\1/" #("ifstat -i eth1,wlan0 -q 1 1 | tail -n 1" 0 39 (fontified t face font-lock-string-face)) #("#!/usr/bin/clisp
+
+" 0 17 (fontified t) 17 18 (fontified t)) #("  :wait nil
+" 0 2 (fontified t) 2 7 (face font-lock-builtin-face fontified t) 7 12 (fontified t)) "ifstat -i eth1,wlan0 -q 1 1" "#!/usr/bin/clisp
+
+(read-line
+ (ext:shell
+  \"aumix -n get Master 2>/dev/null \\ egrep -o \\\"[0-9]{1,3}%\\\" | tail -n 1\"
+  :wait nil
+  :output :stream))" #("
+  #(127 0 0 1)
+  )
+(defparameter *mpd-port* 6600)
+(defparameter *mpd-password* nil)
+
+(defvar *mpd-timeout* 50)
+
+(defvar *mpd-timer* nil)
+
+(defmacro with-mpd-connection (&body body)
+  `(if *mpd-socket*
+       (handler-case (progn ,@body)
+	 (error (c) (progn
+		      (format t \"Error " 0 21 (fontified t) 21 33 (face font-lock-keyword-face fontified t) 33 34 (fontified t) 34 44 (face font-lock-variable-name-face fontified t) 44 52 (fontified t) 52 64 (face font-lock-keyword-face fontified t) 64 65 (fontified t) 65 79 (face font-lock-variable-name-face fontified t) 79 87 (fontified t) 87 93 (face font-lock-keyword-face fontified t) 93 94 (fontified t) 94 107 (face font-lock-variable-name-face fontified t) 107 114 (fontified t) 114 120 (face font-lock-keyword-face fontified t) 120 121 (fontified t) 121 132 (face font-lock-variable-name-face fontified t) 132 140 (fontified t) 140 148 (face font-lock-keyword-face fontified t) 148 149 (fontified t) 149 168 (face font-lock-function-name-face fontified t) 168 170 (fontified t) 170 175 (face font-lock-type-face fontified t) 175 186 (fontified t) 186 188 (face font-lock-keyword-face fontified t) 188 210 (fontified t) 210 222 (face font-lock-keyword-face fontified t) 222 224 (fontified t) 224 229 (face font-lock-keyword-face fontified t) 229 241 (fontified t) 241 246 (face font-lock-warning-face fontified t) 246 252 (fontified t) 252 257 (face font-lock-keyword-face fontified t) 257 276 (fontified t) 276 283 (face font-lock-string-face fontified t))))
+(setq-default session-file-alist '(("~/.emacs" 17317 17038 1 nil nil 17275 (overwrite-mode)) ("/mnt/sda7/download/split_bootimg.pl" 6178 1 1 nil nil 3043 (overwrite-mode)) ("~/tmp/github/cl-learning/small-scripts/mpc/mpc.lisp" 68003 56844 1 nil nil 68003 (overwrite-mode)) ("~/tmp/github/cl-learning/small-scripts/ifstat/ifstat.lisp" 280 148 1 nil nil 147 (overwrite-mode)) ("~/tmp/github/cl-learning/small-scripts/volume/volume.lisp" 184 1 1 nil nil 166 (overwrite-mode)) ("~/tmp/github/cl-learning/.git/COMMIT_EDITMSG" 19 nil 1 nil nil 19 (overwrite-mode)) ("~/tmp/github/cl-learning/small-scripts/mem/mem.lisp" 1273 1276 1 nil nil 72 (overwrite-mode)) ("~/tmp/github/cl-learning/small-scripts/cpu/cpu.lisp" 131 1886 1 nil nil 1882 (overwrite-mode)) ("~/tmp/github/cl-learning/small-scripts/date/date.lisp" 91 91 1 nil nil 170 (overwrite-mode)) ("~/tmp/github_projects/common-lisp-learning/.git/COMMIT_EDITMSG" 25 nil 1 nil nil 25 (overwrite-mode)) ("~/common_lisp/sbcl/battery/battery.lisp" 397 374 1 nil nil 17 (overwrite-mode)) ("~/.config/awesome/rc.lua" 261 nil 1 nil nil 2 (overwrite-mode)) ("~/.i3status.conf" 57 1 1 nil nil 503 (overwrite-mode)) ("~/.i3/config" 4418 4414 1 nil nil 4397 (overwrite-mode))))
+(setq-default file-name-history '("~/.emacs" "/mnt/sda7/download/split_bootimg.pl" "~/tmp/github/cl-learning/README" "~/tmp/github/cl-learning/small-scripts/mpc/mpc.lisp" "~/tmp/github/cl-learning/small-scripts/ifstat/ifstat.lisp" "~/tmp/github/cl-learning/small-scripts/volume/volume.lisp" "~/tmp/stumpwm/contrib/mpd.lisp" "~/tmp/github/cl-learning/.git/COMMIT_EDITMSG" "~/tmp/github/cl-learning/small-scripts/mem/" "~/tmp/github/cl-learning/small-scripts/mem/mem.lisp" "~/tmp/stumpwm/contrib/mem.lisp" "~/tmp/stumpwm/contrib/aumix.lisp" "~/tmp/stumpwm/contrib/amixer.lisp" "~/tmp/stumpwm/contrib/battery-portable.lisp" "~/tmp/stumpwm/contrib/battery.lisp" "~/tmp/github/cl-learning/small-scripts/cpu/cpu.lisp" "/usr/share/common-lisp/source/stumpwm/contrib/cpu.lisp" "~/download/shelisp.lisp" "~/tmp/github/cl-learning/small-scripts/date/date.lisp" "~/tmp/github/cl-learning/small-scripts/battery/battery.lisp" "~/tmp/github_projects/common-lisp-learning/.git/COMMIT_EDITMSG" "~/tmp/github_projects/common-lisp-learning/README.md" "~/common_lisp/sbcl/battery/battery.lisp" "~/common_lisp/sbcl/battery/" "~/.config/awesome/rc.lua" "~/.i3status.conf" "/etc/i3status.conf" "~/.i3/config"))
+(setq-default search-ring '("white" "f1" "bar" "grep"))
+(setq-default Man-topic-history '("i3status"))
+(setq-default buffer-name-history '(#(".emacs" 0 6 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) "mpc.lisp" " *undo-tree*" "amixer.lisp" "battery.lisp" "date.lisp" "*Fuzzy Completions*"))
+(setq-default command-history '((kill-buffer #(".emacs" 0 6 ...)) (find-file "~/.emacs" t) (ecb-activate) (find-file "~/tmp/github/cl-learning/small-scripts/volume/volume.lisp" t) (find-file "~/tmp/github/cl-learning/small-scripts/ifstat/ifstat.lisp" t) (kill-buffer "mpc.lisp") (find-file "~/tmp/github/cl-learning/small-scripts/mpc/mpc.lisp" t) (kill-buffer " *undo-tree*") (undo-tree-visualize) (find-file "~/tmp/github/cl-learning/small-scripts/mem/mem.lisp" t) (find-file "~/tmp/stumpwm/contrib/mem.lisp" t) (find-file "~/tmp/stumpwm/contrib/aumix.lisp" t) (kill-buffer "amixer.lisp") (find-file "~/tmp/stumpwm/contrib/amixer.lisp" t) (find-file "~/tmp/stumpwm/contrib/battery-portable.lisp" t) (kill-buffer "battery.lisp") (find-file "~/tmp/stumpwm/contrib/battery.lisp" t) (find-file "~/tmp/github/cl-learning/small-scripts/cpu/cpu.lisp" t) (find-file "~/download/shelisp.lisp" t) (slime) (kill-buffer "date.lisp") (find-file "~/tmp/github/cl-learning/small-scripts/date/date.lisp" t) (kill-buffer "*Fuzzy Completions*") (find-file "~/common_lisp/sbcl/battery/battery.lisp" t) (find-file "~/common_lisp/sbcl/battery/" t) (find-file "/etc/i3status.conf" t) (find-file "~/.i3status.conf" t) (woman nil nil)))
+(setq-default extended-command-history '("ecb-activate" "undo-tree-visualize" "slime" "woman" "shell"))
+(setq-default hi-lock-face-history '("hi-yellow" "hi-pink" "hi-green" "hi-blue" "hi-black-b" "hi-blue-b" "hi-red-b" "hi-green-b" "hi-black-hb"))
+(setq-default serial-name-history '("/dev/ttyS0"))
+(setq-default serial-speed-history '("9600" "1200" "2400" "4800" "14400" "19200" "28800" "38400" "57600" "115200"))
+(setq-default slime-connect-host-history '("127.0.0.1"))
+(setq-default slime-connect-port-history '("4005"))
+(setq-default woman-topic-history '("i3status"))
