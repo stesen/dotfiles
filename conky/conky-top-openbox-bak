@@ -1,0 +1,3 @@
+
+TEXT
+${execi 5 /home/stesen/tools/scripts/sysres.pl}             

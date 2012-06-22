@@ -1,0 +1,37 @@
+cpu_avg_samples 2
+net_avg_samples 2
+out_to_console no
+use_xft yes
+xftfont Sans:size=8
+xftalpha 0.8
+update_interval 1
+double_buffer yes
+minimum_size 5 5
+maximum_width 300
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 1
+border_margin 5
+border_width 1
+draw_graph_borders no
+default_color  e0e0e0
+alignment top_left
+own_window_colour 262729
+gap_x 10
+gap_y 100
+use_spacer yes
+no_buffers yes
+uppercase no
+background yes
+
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+override_utf8_locale yes
+
+TEXT
+${color 93ee12}MPD:$alignr$color ${mpd_elapsed}/$mpd_length} ${mpd_percent}%
+$alignr${mpd_bar 2,300}
+${font WenQuanYi Micro Hei Mono:size=7}$mpd_file$font

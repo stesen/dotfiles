@@ -1,0 +1,4 @@
+#! /bin/sh
+cd /home/stesen/.config/conky/
+#$PYTHONPATH /usr/bin/python /home/stesen/.config/conky/conkyForecast.py "$@"
+/usr/bin/python /home/stesen/.config/conky/conkyForecast.py "$@"

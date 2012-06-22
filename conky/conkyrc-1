@@ -1,0 +1,76 @@
+# Conky settings #
+background no
+update_interval 1
+cpu_avg_samples 10
+net_avg_samples 8
+override_utf8_locale yes
+double_buffer yes
+#no_buffers yes
+text_buffer_size 4096
+#imlib_cache_size 0
+#temperature_unit fahrenheit
+# Window specifications #
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+border_inner_margin 0
+border_outer_margin 0
+#minimum_size 150 300
+maximum_width 200
+alignment tr
+gap_x 15
+gap_y 55
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+# Text settings #
+use_xft yes
+xftfont DejaVuSansMono:size=8
+#xftfont WenQuanYiMicroHeiMonoLight:size=8
+xftalpha 0.5
+uppercase no
+temperature_unit celsius
+default_color FFFFFF
+# Lua Load  #
+lua_load ~/.config/conky/clock_rings.lua
+lua_draw_hook_pre clock_rings
+
+TEXT
+${voffset -10}${color #d60750}${font  openlogos:style=Bold:pixelsize=120}J${font} $color${voffset -55}$stippled_hr
+${voffset -25}${font Delphine:size=50}${color b2c7c8}${goto 20}${time %H}${font Delphine:size=35}${voffset -15} :${time %M}${font Delphine:size=20}${voffset -5} '${time %S}''
+${font}${color 797979}${stippled_hr} ${offset -115}${color}${font :style=Bold:size=8}${time %a/%G/%m/%d}
+${voffset 5}${color 7c9db0}${font DejaVu Sans Mono:size=10}${execpi 300 DJS=`date +%_d`; cal | sed '1d' | sed '/./!d' | sed 's/$/                     /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignc} /' | sed /" $DJS "/s/" $DJS "/" "'${color ff8d00}'"$DJS"'${color 8F8F8F}'" "/}${font}
+${color 797979}$stippled_hr${color}${font}
+${alignc}${color 7e7e7e}Hour
+
+
+${offset 5}${voffset 10}Month
+
+${voffset 3}${offset 16}Date
+
+
+
+
+${voffset 2}${offset 130}Week
+${color}${cpu cpu0}%
+${color}${cpu cpu1}%
+${acpitemp}°C${color 0860a8}${offset -3}${voffset -38}${font IllustrateIT:size=18}F${font}
+
+
+${color}${goto 45}${memperc}%
+${color 3399FF}${goto 45}${font :style=Bold:pixelsize=10}RAM${font}
+${goto 66}${voffset 18}${color 3399FF}${font :style=Bold:pixelsize=12}/  ${font}${color}${fs_used_perc /}%  ${voffset -20}${color 3399FF}${font Computers:size=24}>
+${voffset -10}${goto 48}${color 3399FF}${font :style=Bold:pixelsize=10}/home  ${font}${color}${fs_used_perc /home}%
+${voffset -25}${goto 48}${color 3399FF}${font :style=Bold:pixelsize=10}/work  ${font}${color}${fs_used_perc /work}%
+
+
+
+${color 3399FF}${goto 120}${font :style=Bold:size=10}Eth0${font}${color}
+${goto 100}${color 98AE68}${font PizzaDude Bullets:size=10}U${font}${color}${downspeed eth0}
+${goto 100}${color 98AE68}${font PizzaDude Bullets:size=10}O${font}${color}${upspeed eth0}
+${voffset 26}${goto 40}${color 3399FF}${font :style=Bold:size=10}Wlan0${font}${color}
+${goto 30}${color 98AE68}${font PizzaDude Bullets:size=10}U${font}${color}${downspeed wlan0}
+${goto 30}${color 98AE68}${font PizzaDude Bullets:size=10}O${font}${color}${upspeed wlan0}

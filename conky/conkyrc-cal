@@ -1,0 +1,64 @@
+cpu_avg_samples 2
+net_avg_samples 2
+out_to_console no
+use_xft yes
+xftfont WenQuanYi Micro Hei Mono:size=8
+xftalpha 0.9
+update_interval 2
+double_buffer yes
+minimum_size 5 5
+maximum_width 220
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 1
+border_margin 5
+border_width 1
+draw_graph_borders no
+default_color  e0e0e0
+alignment top_right
+own_window_colour 262729
+gap_x 10
+gap_y 50
+no_buffers yes
+uppercase no
+background yes
+color1 93ee12
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+override_utf8_locale yes
+
+TEXT
+${color2}${goto 40}${font WenQuanYi Micro Hei Mono:size=45}${time %H}${font WenQuanYi Micro Hei Mono:size=20}${voffset -25}'${time %M}${font WenQuanYi Micro Hei Mono:size=8}${voffset -12}${time %S}
+${color2}${goto 140}${voffset 15}${font WenQuanYi Micro Hei:size=7}${time %A}
+${color2}${goto 135}${font WenQuanYi Micro Hei Mono:size=7}${time %d %b %Y}
+${goto 45}${color2}${font WenQuanYi Micro Hei:size=7}${execi 1800 /home/stesen/tools/scripts/colunar|head -2|tail -1}
+
+${color e0e0e0}${font WenQuanYi Micro Hei Mono:size=9}${execpi 1800 DJS=`date +%_d`; cal | sed '1d' | sed '/./!d' | sed 's/$/                     /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignc} /' | sed /" $DJS "/s/" $DJS "/" "'${color red}'"$DJS"'${color 8F8F8F}'" "/}${font}
+
+${color 93ee12}${font sans-serif:size=8}IP Address:$font${color}
+${offset 10}eth0  IP :   ${addr eth0}
+${offset 10}wlan0 IP :   ${addr wlan0}
+${font sans-serif:size=8}${color 93ee12}Acpi:${offset 60}HDD:${offset 60}Freq :$font
+#${color}${execi 60 sensors| tail -2 |head -1|cut -d" " -f8|cut -d"+" -f2}        ${execi 60 echo 998755 | sudo -S hddtemp /dev/sda |cut -d":" -f3 | cut -d" " -f2}       $freq MHz
+${font sans-serif:size=8}${color 93ee12}CPU Usage:$font${color}${alignr}$cpu%
+${color}${cpugraph cpu0 20,100 262729 87CEFA}${offset 10}${cpugraph cpu1 20,100 262729 87CEFA}
+${offset 2}${color 93ee12}${font sans-serif:size=8}Disk IO:$font${color}${alignr}$diskio
+${color}${diskiograph_read 20,100 262729 87CEFA}${offset 10}${diskiograph_write 20,100 262729 87CEFA}
+${color 93ee12}${font sans-serif:size=8}RAM Usage:$font${color}${alignr}$mem/$memmax
+${membar 3}$color
+${color 93ee12}${font sans-serif:size=8}Battery:$font$alignr${color}${battery_time} left--${battery_percent}%
+${battery_bar 3}
+${color 93ee12}${font sans-serif:size=8}Networking:$font${color}
+${offset 4}${color 87CEFA}Marvell 88E8039 Ethernet:${color }
+${offset 10}${font PizzaDude Bullets:size=8}r${font}Down:  ${downspeed eth0}
+${offset 10}${font PizzaDude Bullets:size=8}U${font}Total Down: ${totaldown eth0}${voffset -10}$alignr${voffset -5}$color${downspeedgraph eth0 20,130 262729 87CEFA}
+${color }${offset 10}${font PizzaDude Bullets:size=8}r${font}Up  :  ${upspeed eth0}
+${offset 10}${font PizzaDude Bullets:size=8}U${font}Total Up  : ${totalup eth0}${voffset -10}$alignr${voffset -5}$color${upspeedgraph eth0 20,100 262729 87CEFA}
+${offset 4}${color 87CEFA}Intel PRO/Wireless 3945ABG:${color }
+${offset 10}${font PizzaDude Bullets:size=8}r${font}Down:  ${downspeed wlan0}
+${offset 10}${font PizzaDude Bullets:size=8}U${font}Total Dw: ${totaldown wlan0}${voffset -10}$alignr${voffset -5}$color${downspeedgraph wlan0 20,100 262729 87CEFA}
+${color }${offset 10}${font PizzaDude Bullets:size=8}r${font}Up  :  ${upspeed wlan0}
+${offset 10}${font PizzaDude Bullets:size=8}U${font}Total Up: ${totalup wlan0}${voffset -10}$alignr${voffset -5}${color}${upspeedgraph wlan0 20,100 262729 87CEFA}

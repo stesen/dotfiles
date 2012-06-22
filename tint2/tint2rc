@@ -7,29 +7,29 @@
 #---------------------------------------------
 rounded = 0
 border_width = 0
-background_color = #000000 80
-border_color = #000000 50
+background_color = #000000 100
+border_color = #000000 30
 
 rounded = 0
 border_width = 1
-background_color = #000000 30
+background_color = #000000 100
 border_color = #FFFFFF 30
 
 rounded = 0
 border_width = 0
-background_color = #0f0f0f 30
-border_color = #f0f0f0 50
+background_color = #0f0f0f 100
+border_color = #f0f0f0 30
 
 rounded = 0
 border_width = 0
-background_color = #f0f0f0 40
-border_color = #f0f0f0 50
+background_color = #f0f0f0 50
+border_color = #f0f0f0 30
 #---------------------------------------------
 # PANEL
 #---------------------------------------------
 panel_monitor = all
 panel_position = top left
-panel_size = 550 15
+panel_size = 0 20
 panel_margin = 0 0
 panel_padding = 1 0 0
 font_shadow = 0
@@ -48,8 +48,8 @@ taskbar_background_id = 2
 # TASKS
 #---------------------------------------------
 task_icon = 1
-task_text = 0
-task_maximum_size = 15
+task_text = 1
+task_maximum_size = 100
 task_centered = 0
 task_padding = 1 0
 task_font = WenQuanYi Micro Hei Mono 8
@@ -57,19 +57,6 @@ task_font_color = #ffffff 60
 task_active_font_color = #ffffff 100
 task_background_id = 3
 task_active_background_id = 4
-
-#---------------------------------------------
-# CLOCK
-#---------------------------------------------
-#time1_format = %Y-%m-%d %a %H:%M
-#time1_font = DejaVu Sans 8
-#time2_format = %A %d %B
-#time2_font = san 5
-clock_font_color = #ffffff 100
-clock_padding = 1 0
-clock_background_id = 1
-clock_lclick_command = urxvt -e mocp
-#clock_rclick_command = todo
 
 #---------------------------------------------
 # SYSTRAYBAR
@@ -80,7 +67,7 @@ systray_background_id = 1
 #---------------------------------------------
 # BATTERY
 #---------------------------------------------
-battery = 0
+battery = 1
 battery_low_status = 10
 battery_low_cmd = notify-send "battery low"
 bat1_font = sans 7
@@ -88,6 +75,21 @@ bat2_font = sans 7
 battery_font_color = #ffffff 90
 battery_padding = 1 0
 battery_background_id = 1
+
+#---------------------------------------------
+# CLOCK
+#---------------------------------------------
+time1_format = %Y-%m-%d %a %H:%M
+time1_font = DejaVu Sans 8
+#--------------------------------------------------
+# time2_format = %A %d %B
+# time2_font = san 5
+#-------------------------------------------------- 
+clock_font_color = #ffffff 100
+clock_padding = 1 0
+clock_background_id = 1
+clock_lclick_command = urxvt -e mocp
+#clock_rclick_command = todo
 
 #---------------------------------------------
 # MOUSE ACTION ON TASK

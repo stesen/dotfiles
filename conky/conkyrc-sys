@@ -1,0 +1,38 @@
+cpu_avg_samples 2
+net_avg_samples 2
+font -adobe-helvetica-*-r-normal--10-*-*-*-*-*-*-*
+use_xft yes
+xftfont DejaVu Sans:size=7
+xftalpha 0.8
+update_interval 1
+double_buffer yes
+#maximum_width 1200
+minimum_size 5 5
+draw_shades no
+draw_outline no
+draw_borders no
+border_margin 4
+border_width 0
+draw_graph_borders no
+default_color  e0e0e0
+color1 93ee12
+alignment bottom_middle
+own_window_colour 262729
+gap_x 0
+gap_y 10
+#use_spacer yes
+no_buffers yes
+uppercase no
+background no
+
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+override_utf8_locale yes
+
+show_graph_scale no
+show_graph_range no
+
+TEXT
+${color1}CPU:$color$cpu% ${color1}RAM:$color$mem ${color1}Battery:$color${battery_percent}% | ${color1}Acpi-Temp:${color}${execi 300 sensors| tail -2 |head -1|cut -d" " -f8|cut -d"+" -f2} ${color1}HDD-Temp:$color${execi 300 echo 998755 | sudo hddtemp /dev/sda |cut -d":" -f3 | cut -d" " -f2} | ${color1}/$color:${fs_used_perc /}% ${color1}/home$color:${fs_used_perc /home}% ${color1}/work$color:${fs_used_perc /work}% ${if_up eth0}| ${color1}LAN$color${font PizzaDude Bullets:size=8}S$font:${downspeed eth0}${color1}LAN$color${font PizzaDude Bullets:size=8}M$font:${upspeed eth0}$endif${if_up wlan0}| ${color1}WLAN$color${font PizzaDude Bullets:size=8}S$font:${downspeed wlan0}${color1}WLAN$color${font PizzaDude Bullets:size=8}M$font:${upspeed wlan0}$endif        
