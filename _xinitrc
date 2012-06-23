@@ -1,0 +1,56 @@
+#!/bin/sh
+
+export LANG=C
+export LC_CTYPE="zh_CN.UTF-8"
+
+# export XMODIFIERS=@im=ibus
+# export GTK_IM_MODULE="ibus"
+# export QT_IM_MODULE="ibus"
+
+export XMODIFIERS="@im=fcitx"
+export XIM=/usr/bin/fcitx
+export GTK_IM_MODULE=xim
+export QT_IM_MODULE=xim
+export XIM_PROGRAM=fcitx
+
+export OOO_FORCE_DESKTOP=gnome
+wmname LG3D
+xsetroot -cursor_name DMZ-White
+
+DEFAULT_SESSION=musca
+
+# xset m 12 60
+
+case $DEFAULT_SESSION in
+    dwm)
+        xrdb ~/.Xresources &
+        feh --bg-scale /home/stesen/pic/random/200807014841-5436.png &
+
+        while true
+        do
+            xsetroot -name "$(sysres.pl)" &
+            sleep 5
+        done &
+
+        xcompmgr-dana -cCfF -t-5 -l-5 -r4.2 -o.55 -D3 -m.86 &
+        exec dwm 2>/dev/null
+        ;;
+    musca)
+        xrdb ~/.Xresources &
+        wmname LG3D
+        feh --bg-scale ~/pic/random/sidux-hypnos.png &
+        sleep 0.5
+        exec musca 2>/dev/null
+        ;;
+    xfce)
+        xrdb ~/.Xresources &
+        eval `/usr/bin/dbus-launch --sh-syntax --exit-with-session`
+        exec xfce4-session
+        ;;
+    *)
+        xrdb ~/.Xresources &
+        eval `/usr/bin/dbus-launch --sh-syntax --exit-with-session`
+        exec ck-launch-session openbox-session
+        #exec openbox-session
+        ;;
+esac

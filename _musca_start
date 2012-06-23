@@ -7,16 +7,10 @@ manage off zenity
 manage off stp
 
 exec xrdb ~/.Xresources
-exec tint2 -c ~/.config/tint2/text_only_1.tint2rc
-exec dzen2_info.sh
-exec (sleep 3 && netwmpager)
 exec xbindkeys
-exec automount.sh
-#exec ibus-daemon --xim > /dev/null 2>&1
 exec fcitx -d > /dev/null 2>&1
 exec volumeicon
-#exec nm-applet
-#exec /home/stesen/.config/background.sh
+exec nm-applet
 
 set frame_resize 30
 set window_open_frame empty
@@ -74,8 +68,8 @@ bind on Mod4+Shift+j swap down
 bind on XF86AudioRaiseVolume exec amixer sset Master,0 5%+
 bind on XF86AudioLowerVolume exec amixer sset Master,0 5%-
 
-pad 0 0 15 0
-hook on ^add pad 0 0 15 0
+pad 0 0 20 0
+hook on ^add pad 0 0 20 0
 
 add 坤
 add 震
@@ -86,3 +80,4 @@ add 坎
 add 离
 use 0
 name 乾
+exec tint2
